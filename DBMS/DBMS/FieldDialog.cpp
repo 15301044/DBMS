@@ -201,19 +201,6 @@ BOOL CFieldDialog::OnInitDialog()
 		m_iLength = m_fieldEntity.GetLength();
 		m_sDefault = m_fieldEntity.GetDefault();
 
-		
-		//GetDlgItem(IDC_EDIT3)->SetWindowTextW(CUtil::IntegerToString(m_iLength));
-		//if(m_fieldEntity.GetMin()!=-1)
-		//{
-		//	GetDlgItem(IDC_EDIT6)->SetWindowTextW(
-		//		CUtil::IntegerToString(m_fieldEntity.GetMin()));
-		//}
-		//if(m_fieldEntity.GetMax()!=-1)
-		//{
-		//	GetDlgItem(IDC_EDIT5)->SetWindowTextW(
-		//		CUtil::IntegerToString(m_fieldEntity.GetMax()));
-		//}
-
 
 		if(m_bPK)
 		{
