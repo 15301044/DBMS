@@ -15,7 +15,5 @@ public:
 	static bool DeleteRecordByName(CString &fileName,CString &name);
 	static bool DeleteRecordById(CString &fileName,int id);
 	static bool SaveCounter(CString &filePath,int counter);
-
-
 };
 

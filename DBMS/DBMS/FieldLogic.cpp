@@ -17,6 +17,50 @@ CFieldLogic::~CFieldLogic(void)
 {
 }
 
+//获得数据库文件夹路径
+CString CFieldLogic::GetDBFolder(const CString strDBName)
+{
+	CString strFolder = _T("");
+	try
+	{
+		// Get the path of the database folder
+		strFolder.Format(_T("data\\%s"), strDBName);
+		strFolder = GetAbsolutePath(strFolder);
+	}
+	catch (CConditionQuery* e)
+	{
+		throw e;
+	}
+	catch (...)
+	{
+		throw new CConditionQuery(_T("获得数据库文件夹路径失败!"));
+	}
+
+	return strFolder;
+}
+
+//获得tb文件路径
+CString CFieldLogic::GetTableFile(const CString strDBName)
+{
+	CString strPath = _T("");
+	try
+	{
+		// Get the absolute path of the table description file(*.tb)
+		strPath.Format(_T("data\\%s\\%s.tb"), strDBName, strDBName);
+		strPath = GetAbsolutePath(strPath);
+	}
+	catch (CConditionQuery* e)
+	{
+		throw e;
+	}
+	catch (...)
+	{
+		throw new CConditionQuery(_T("获得tb文件路径失败!"));
+	}
+	return strPath;
+}
+
+
 //创建字段
 int CFieldLogic::CreateField(CFieldEntity &field)
 {
