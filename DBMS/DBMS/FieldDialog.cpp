@@ -293,7 +293,7 @@ void CFieldDialog::OnCbnSelchangeType()
 	UpdateData(FALSE);
 }
 
-
+//Ìí¼Ó×Ö¶Î
 void CFieldDialog::AddField(bool flag)
 {
 	bool havePK = false;
@@ -341,6 +341,7 @@ void CFieldDialog::AddField(bool flag)
 	}
 }
 
+//ÐÞ¸Ä×Ö¶Î
 void CFieldDialog::ModifyField(bool flag)
 {
 	

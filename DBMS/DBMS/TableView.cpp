@@ -212,8 +212,6 @@ void CTableView::OnDeleteField()
 		}
 	}
 
-	
-
 }
 
 
