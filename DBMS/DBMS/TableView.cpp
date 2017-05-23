@@ -114,17 +114,17 @@ void CTableView::DisplayFields(vector<CFieldEntity> &fieldList)
 	this->ClearTable();
 
 	m_ListCtrl->InsertColumn(0, CString("#"), LVCFMT_LEFT, 0);
-	m_ListCtrl->InsertColumn(1, CString("字段名"), LVCFMT_LEFT, 100);
+	m_ListCtrl->InsertColumn(1, CString("字段名称"), LVCFMT_LEFT, 80);
 	m_ListCtrl->InsertColumn(2, CString("顺序"), LVCFMT_LEFT, 0);
-	m_ListCtrl->InsertColumn(3, CString("类型"), LVCFMT_LEFT, 80);
-	m_ListCtrl->InsertColumn(4, CString("长度"), LVCFMT_LEFT, 50);
-	m_ListCtrl->InsertColumn(5, CString("最小值"), LVCFMT_LEFT, 100);
-	m_ListCtrl->InsertColumn(6, CString("最大值"), LVCFMT_LEFT, 100);
-	m_ListCtrl->InsertColumn(7, CString("默认值"), LVCFMT_LEFT, 100);
-	m_ListCtrl->InsertColumn(8, CString("主键"), LVCFMT_LEFT, 40);
-	m_ListCtrl->InsertColumn(9, CString("允许空值"), LVCFMT_LEFT, 70);
-	m_ListCtrl->InsertColumn(10, CString("唯一值"), LVCFMT_LEFT, 60);
-	m_ListCtrl->InsertColumn(11, CString("注释"), LVCFMT_LEFT, 100);
+	m_ListCtrl->InsertColumn(3, CString("字段类型"), LVCFMT_LEFT, 80);
+	m_ListCtrl->InsertColumn(4, CString("字段长度"), LVCFMT_LEFT, 80);
+	m_ListCtrl->InsertColumn(5, CString("字段范围(MIN)"), LVCFMT_LEFT, 100);
+	m_ListCtrl->InsertColumn(6, CString("字段范围(MAX)"), LVCFMT_LEFT, 100);
+	m_ListCtrl->InsertColumn(7, CString("字段初值"), LVCFMT_LEFT, 80);
+	m_ListCtrl->InsertColumn(8, CString("是否主键"), LVCFMT_LEFT, 80);
+	m_ListCtrl->InsertColumn(9, CString("是否允许空值"), LVCFMT_LEFT, 100);
+	m_ListCtrl->InsertColumn(10, CString("是否唯一"), LVCFMT_LEFT, 80);
+	m_ListCtrl->InsertColumn(11, CString("字段说明"), LVCFMT_LEFT, 80);
 
 	for (int i = 0; i < fieldList.size(); ++i)
 	{
@@ -187,7 +187,7 @@ void CTableView::OnDeleteField()
 		POSITION pos = m_ListCtrl->GetFirstSelectedItemPosition();
 		if (pos != NULL)
 		{
-			if (MessageBox(CString("确定要删除该字段？"),CString("删除字段"),MB_OKCANCEL)==IDOK)
+			if (MessageBox(CString("确定删除该字段？"),CString("删除字段"),MB_OKCANCEL)==IDOK)
 			{
 				int nItem = m_ListCtrl->GetNextSelectedItem(pos);
 				fieldName =  m_ListCtrl->GetItemText(nItem,1);
@@ -219,7 +219,6 @@ void CTableView::OnDeleteField()
 
 void CTableView::OnNMRClick(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	/*
 	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
 	// TODO: 在此添加控件通知处理程序代码
 	NM_LISTVIEW* pNMListView = (NM_LISTVIEW*)pNMHDR;
@@ -263,7 +262,6 @@ void CTableView::OnNMRClick(NMHDR *pNMHDR, LRESULT *pResult)
 	}
 
 	*pResult = 0;
-	*/
 }
 
 

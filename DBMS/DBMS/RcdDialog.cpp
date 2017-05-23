@@ -68,12 +68,12 @@ BOOL CRcdDialog::OnInitDialog()
 	dwStyle |= LVS_EX_GRIDLINES;                          // 网格线
 	m_listCtl.SetExtendedStyle(dwStyle);                  // 设置扩展风格
 
-	m_listCtl.InsertColumn(0, CString("字段名"), LVCFMT_LEFT, 70);
-	m_listCtl.InsertColumn(1, CString("类型"), LVCFMT_LEFT, 70);
-	m_listCtl.InsertColumn(2, CString("主键"), LVCFMT_LEFT, 50);
-	m_listCtl.InsertColumn(3, CString("允许空"), LVCFMT_LEFT, 50);
-	m_listCtl.InsertColumn(4, CString("唯一"), LVCFMT_LEFT, 50);
-	m_listCtl.InsertColumn(5, CString("值"), LVCFMT_LEFT, 100);
+	m_listCtl.InsertColumn(0, CString("字段名称"), LVCFMT_LEFT, 70);
+	m_listCtl.InsertColumn(1, CString("字段类型"), LVCFMT_LEFT, 70);
+	m_listCtl.InsertColumn(2, CString("是否主键"), LVCFMT_LEFT, 70);
+	m_listCtl.InsertColumn(3, CString("是否允许空值"), LVCFMT_LEFT, 100);
+	m_listCtl.InsertColumn(4, CString("是否唯一"), LVCFMT_LEFT, 70);
+	m_listCtl.InsertColumn(5, CString("字段值"), LVCFMT_LEFT, 70);
 
 	
 	for (int i=0; i<m_vFieldList.size(); ++i)

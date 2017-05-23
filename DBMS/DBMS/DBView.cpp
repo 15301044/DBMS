@@ -131,7 +131,6 @@ void CDBView::DisplayDBList()
 
 void CDBView::OnNMRClick(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	/*
 	// TODO: 在此添加控件通知处理程序代码
 	CPoint point(GetMessagePos());
 	unsigned int nFlags = 0;
@@ -156,7 +155,6 @@ void CDBView::OnNMRClick(NMHDR *pNMHDR, LRESULT *pResult)
 		}
 	}
 	*pResult = 0;
-	*/
 }
 
 
