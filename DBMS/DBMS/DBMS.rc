@@ -132,15 +132,15 @@ BEGIN
     END
     POPUP "×Ö¶Î(&F)"
     BEGIN
-        MENUITEM "Ìí¼Ó×Ö¶Î(&N)",                    ID_32780, INACTIVE
-        MENUITEM "ÐÞ¸Ä×Ö¶Î(&M)",                    ID_32781, INACTIVE
-        MENUITEM "É¾³ý×Ö¶Î(&D)",                    ID_32782, INACTIVE
+        MENUITEM "Ìí¼Ó×Ö¶Î(&N)",                    ID_32780
+        MENUITEM "ÐÞ¸Ä×Ö¶Î(&M)",                    ID_32781
+        MENUITEM "É¾³ý×Ö¶Î(&D)",                    ID_32782
     END
     POPUP "¼ÇÂ¼(&R)"
     BEGIN
-        MENUITEM "Ìí¼Ó¼ÇÂ¼(&N)",                    ID_32783, INACTIVE
-        MENUITEM "ÐÞ¸Ä¼ÇÂ¼(&M)",                    ID_32784, INACTIVE
-        MENUITEM "É¾³ý¼ÇÂ¼(&D)",                    ID_32785, INACTIVE
+        MENUITEM "Ìí¼Ó¼ÇÂ¼(&N)",                    ID_32783
+        MENUITEM "ÐÞ¸Ä¼ÇÂ¼(&M)",                    ID_32784
+        MENUITEM "É¾³ý¼ÇÂ¼(&D)",                    ID_32785
     END
     POPUP "°ïÖú(&H)"
     BEGIN
